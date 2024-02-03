@@ -1,0 +1,239 @@
+/* heavily inspired by jusung lee 
+   also heavily borrowed from the amazing w3schools
+   they are the reason this website looks OK
+   obvious but important: i am not a web developer/designer
+*/
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    max-width: 700px;
+}
+
+body {
+    margin-left: 10%;
+    max-width: 700px;
+    margin-right: 10%;
+}
+
+#main {
+    top: 50%;
+    margin-top: 0px;
+}
+
+i {
+    padding-left: 8px;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-transition: 0.25s; /* Safari 3.1 to 6.0 */
+    transition: 0.25s;
+    opacity: 1;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0px;
+}
+
+.avatar {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.textb {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* from https://stackoverflow.com/questions/40656611/best-way-to-make-a-image-grid-all-same-size-and-dimensions */
+.flexMe{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexMe li{
+    width: 400px; 
+    height: 400px;
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+}
+
+.flexMe li img{
+    width: 100%; 
+    height: auto;
+}
+
+b {
+    font-weight: bolder;
+}
+#bss {
+  color: #2A8EB1;
+}
+#tamu {
+  color: #960000;
+}
+#pix1 {
+	color: #a8a027;
+}
+#pix2 {
+	color: #d33a26;
+}
+#pix3 {
+	color: #0085d7;
+}
+#amzn {
+  color: #232f3e;
+}
+
+/* credit to https://rainbowcoding.com/2011/12/02/how-to-create-rainbow-text-in-html-css-javascript/ */
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #9b5ec4;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
